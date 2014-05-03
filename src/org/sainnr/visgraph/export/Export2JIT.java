@@ -4,6 +4,7 @@
  */
 package org.sainnr.visgraph.export;
 
+import java.net.URLEncoder;
 import java.util.HashSet;
 import org.sainnr.webparser.node.Node;
 
@@ -38,7 +39,7 @@ public class Export2JIT implements ExportFormat {
                 json.append(" \"data\": {\"$color\": \"#" + (node.getId()*9) + "aa00\", \"$type\": \"circle\"}, ");
             }
 */
-            json.append(" \"name\": \"").append(node.getUrl()).append("\", ");
+            json.append(" \"name\": \"").append(node.getUrl().replace("\'", "")).append("\", ");
             json.append(" \"data\": {\"$color\": \"#00cc00\", \"$type\": \"circle\"}, ");
             json.append(" \"adjacencies\": [");
             

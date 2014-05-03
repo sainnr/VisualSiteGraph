@@ -18,16 +18,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         
-        <link href="<script>alert('123')</script>" rel="shortcut icon" type="image/x-icon">
-        <link href="<script>alert('123')</script>" rel="icon" type="image/x-icon">
-        
         <link type="text/css" href="ForceDirected.css" rel="stylesheet" />
         <link type="text/css" href="base.css" rel="stylesheet" />
 
         <script language="javascript" type="text/javascript" src="jit-yc.js"></script>
         <script language="javascript" type="text/javascript" src="graph.js"></script>
         <script language="javascript" type="text/javascript">
-            json = '<%=exporter.exportNodes(NodeManager.getAllNodes())%>';
+            var json = '<%=exporter.exportNodes(NodeManager.getAllNodes())%>';
         </script>
 
     </head>

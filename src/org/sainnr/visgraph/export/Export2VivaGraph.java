@@ -23,7 +23,7 @@ public class Export2VivaGraph implements ExportFormat {
         int i = 1;
         for (Node node : nodes){
             jsonNodes.append("{\"id\": \"").append(node.getId()).append("\", ");
-            jsonNodes.append(" \"data\": \"").append(node.getUrl()).append("\"}");
+            jsonNodes.append(" \"data\": \"").append(node.getUrl().replace("\'", "")).append("\"}");
 
             int j = 1;
             for (Integer adj : node.getAdjacencies()){
